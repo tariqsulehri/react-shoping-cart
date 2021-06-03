@@ -1,5 +1,8 @@
 
-import CheckOut from './checkout.component';
+//import CheckOut from './checkout.component';
+//feature-1
+
+import React from 'react'
 
 function App() {
 
