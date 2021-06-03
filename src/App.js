@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+
+import CheckOut from './checkout.component';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="grid-container">
+      <header>
+        <a href="/" >React Shoping Cart</a>
       </header>
+
+      <main>
+        Product List
+      </main>
+
+      <footer>
+        All right Reserved
+      </footer>
+
+      {/* <CheckOut /> */}
     </div>
   );
 }
+
+// const mapDispatchToProps = (dispatch) => ({
+//   addItem: () => dispatch(addItem()),
+//   removeItem: () => dispatch(removeItem())
+// })
+
+// const mapStateToProps = createStructuredSelector({
+//   cart: selectCartItems
+// })
+
+// export default connect(
+//   mapStateToProps,
+//   mapDispatchToProps
+// )(App);
 
 export default App;
