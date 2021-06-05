@@ -1,6 +1,7 @@
 
 // import CheckOut from './checkout.component';
 import React from 'react';
+import Cart from './components/cart';
 import Filter from './components/filter';
 import Products from './components/products';
 import data from './data.json';
@@ -11,9 +12,55 @@ class App extends React.Component {
     super();
     this.state = {
       products: data.products,
+      cartItems: [],
       size: "",
       sort: "",
     }
+  }
+
+  removeFromCart = (product) => {
+
+    console.log("Removing from Cart");
+    let cartItems = [...this.state.cartItems];
+
+    //this.setState({ cartItems: cartItems.filter((x) => x._id !== product._id) });
+
+    cartItems.forEach((item) => {
+      if (item._id === product._id) {
+        if (item.count === 1) {
+          cartItems = cartItems.filter((x) => x._id !== product._id)
+        } else {
+          item.count = item.count - 1;
+        }
+
+      }
+    })
+
+    this.setState({ cartItems: cartItems });
+
+
+  }
+
+
+  addToCart = (product) => {
+    const cartItems = this.state.cartItems;
+    let alreadyExists = false;
+
+    cartItems.forEach((item) => {
+      if (item._id === product._id) {
+        alreadyExists = true;
+        item.count++;
+      }
+      return;
+    });
+
+    if (!alreadyExists) {
+      cartItems.push({ ...product, count: 1 })
+    }
+
+    this.setState({ cartItems });
+
+
   }
 
   sortProducts = (event) => {
@@ -48,6 +95,7 @@ class App extends React.Component {
   }
 
   render() {
+    const { cartItems } = this.state;
     return (
       <div className="grid-container">
         <header>
@@ -64,9 +112,11 @@ class App extends React.Component {
                 sortProducts={this.sortProducts}
               >
               </Filter>
-              <Products products={this.state.products} />
+              <Products products={this.state.products} addToCart={this.addToCart} />
             </div>
-            <div className="sidebar">Cart Items</div>
+            <div className="sidebar">
+              <Cart cartItems={cartItems} removeFromCart={this.removeFromCart} />
+            </div>
           </div>
         </main>
 
