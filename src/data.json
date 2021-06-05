@@ -1,0 +1,71 @@
+{
+   "products":[
+         {
+            "_id" : "prod1", 
+            "title":"MEN'S BETTER THAN NAKED&trade; JACKET",
+            "description" :"MEN'S BETTER THAN NAKED",
+            "image_url":"images/dress1.jpg",
+            "price" : 19.9,
+            "availableSizes" :[
+                "X-LARGE", "LARGE", "MEDIUM", "SMALL"
+            ]
+         }, 
+         
+         {
+            "_id" : "prod2", 
+            "title":"WOMEN'S BETTER THAN NAKED&trade; JACKET",
+            "description" :"WOMEN'S BETTER THAN NAKED&trade; JACKET",
+            "image_url":"images/dress2.jpg",
+            "price" : 15.2,
+            "availableSizes" :[
+                "X-LARGE", "LARGE", "MEDIUM", "SMALL"
+              ]
+         },
+         {
+            "_id" : "prod3", 
+            "title":"WOMEN'S SINGLE-TRACK SHOE",
+            "description" :"WOMEN'S SINGLE-TRACK SHOE",
+            "image_url":"images/dress3.jpg",
+            "price" : 10.1,
+            "availableSizes" :[
+                "X-LARGE", "LARGE", "MEDIUM", "SMALL"
+              ]
+
+         },
+         {
+            "_id" : "prod4", 
+            "title":"nduro Boa&reg; Hydration Pack",
+            "description" :"nduro Boa&reg; Hydration Pack",
+            "image_url":"images/dress4.jpg",
+            "price" : 11.00,
+            "availableSizes" :[
+                "X-LARGE", "LARGE", "MEDIUM", "SMALL"
+              ]
+
+         },
+         {
+            "_id" : "prod5", 
+            "title":"Dress - 5; Hydration Pack",
+            "description" :"nduro Boa&reg; Hydration Pack",
+            "image_url":"images/dress5.jpg",
+            "price" : 17.00,
+            "availableSizes" :[
+                "X-LARGE", "MEDIUM", "SMALL"
+              ]
+
+         },
+         {
+            "_id" : "prod6", 
+            "title":"Dress - 6; Hydration Pack",
+            "description" :"nduro Boa&reg; Hydration Pack",
+            "image_url":"images/dress6.jpg",
+            "price" : 13.00,
+            "availableSizes" :[
+                "X-LARGE", "LARGE",  "SMALL"
+              ]
+
+         }
+        
+      ]
+   
+}

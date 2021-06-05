@@ -1,25 +1,43 @@
 
-import CheckOut from './checkout.component';
+// import CheckOut from './checkout.component';
+import React, { useState } from 'react';
+import Products from './components/products';
+import data from './data.json';
 
-function App() {
 
-  return (
-    <div className="grid-container">
-      <header>
-        <a href="/" >React Shoping Cart</a>
-      </header>
+class App extends React.Component {
 
-      <main>
-        Product List
-      </main>
+  constructor() {
+    super();
+    this.state = {
+      products: data.products,
+      size: "",
+      sort: "",
+    }
+  }
 
-      <footer>
-        All right Reserved
-      </footer>
+  render() {
+    return (
+      <div className="grid-container">
+        <header>
+          <a href="/" >React Shoping Cart</a>
+        </header>
 
-      {/* <CheckOut /> */}
-    </div>
-  );
+        <main>
+          <div className="content">
+            <div className="main"><Products products={this.state.products} /></div>
+            <div className="sidebar">Cart Items</div>
+          </div>
+        </main>
+
+        <footer>
+          All right Reserved
+        </footer>
+
+        {/* <CheckOut /> */}
+      </div>
+    );
+  }
 }
 
 // const mapDispatchToProps = (dispatch) => ({
