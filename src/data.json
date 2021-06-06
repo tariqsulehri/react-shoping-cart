@@ -3,7 +3,7 @@
          {
             "_id" : "prod1", 
             "title":"MEN'S BETTER THAN NAKED&trade; JACKET",
-            "description" :"MEN'S BETTER THAN NAKED",
+            "description" :"Whether you're searching for trendy styles to update your look or tried-and-true classics you'll love forever, Nordstrom offers the very best in women's clothing. Thanks to our vast online assortment of dresses, pants, skirts and tops from leading brands, building your dream wardrobe is a breeze. To transition seamlessly from season to season, shop our broad selection of warm coats, sweaters and jackets.",
             "image_url":"images/dress1.jpg",
             "price" : 19.9,
             "availableSizes" :[
@@ -14,7 +14,7 @@
          {
             "_id" : "prod2", 
             "title":"WOMEN'S BETTER THAN NAKED&trade; JACKET",
-            "description" :"WOMEN'S BETTER THAN NAKED&trade; JACKET",
+            "description" :"Whether you're searching for trendy styles to update your look or tried-and-true classics you'll love forever, Nordstrom offers the very best in women's clothing. Thanks to our vast online assortment of dresses, pants, skirts and tops from leading brands, building your dream wardrobe is a breeze. To transition seamlessly from season to season, shop our broad selection of warm coats, sweaters and jackets.",
             "image_url":"images/dress2.jpg",
             "price" : 15.2,
             "availableSizes" :[
@@ -24,7 +24,7 @@
          {
             "_id" : "prod3", 
             "title":"WOMEN'S SINGLE-TRACK SHOE",
-            "description" :"WOMEN'S SINGLE-TRACK SHOE",
+            "description" :"Whether you're searching for trendy styles to update your look or tried-and-true classics you'll love forever, Nordstrom offers the very best in women's clothing. Thanks to our vast online assortment of dresses, pants, skirts and tops from leading brands, building your dream wardrobe is a breeze. To transition seamlessly from season to season, shop our broad selection of warm coats, sweaters and jackets.",
             "image_url":"images/dress3.jpg",
             "price" : 10.1,
             "availableSizes" :[
@@ -35,7 +35,7 @@
          {
             "_id" : "prod4", 
             "title":"nduro Boa&reg; Hydration Pack",
-            "description" :"nduro Boa&reg; Hydration Pack",
+            "description" :"Whether you're searching for trendy styles to update your look or tried-and-true classics you'll love forever, Nordstrom offers the very best in women's clothing. Thanks to our vast online assortment of dresses, pants, skirts and tops from leading brands, building your dream wardrobe is a breeze. To transition seamlessly from season to season, shop our broad selection of warm coats, sweaters and jackets.",
             "image_url":"images/dress4.jpg",
             "price" : 11.00,
             "availableSizes" :[
@@ -46,7 +46,7 @@
          {
             "_id" : "prod5", 
             "title":"Dress - 5; Hydration Pack",
-            "description" :"nduro Boa&reg; Hydration Pack",
+            "description" :"Whether you're searching for trendy styles to update your look or tried-and-true classics you'll love forever, Nordstrom offers the very best in women's clothing. Thanks to our vast online assortment of dresses, pants, skirts and tops from leading brands, building your dream wardrobe is a breeze. To transition seamlessly from season to season, shop our broad selection of warm coats, sweaters and jackets.",
             "image_url":"images/dress5.jpg",
             "price" : 17.00,
             "availableSizes" :[
@@ -57,7 +57,7 @@
          {
             "_id" : "prod6", 
             "title":"Dress - 6; Hydration Pack",
-            "description" :"nduro Boa&reg; Hydration Pack",
+            "description" :"Whether you're searching for trendy styles to update your look or tried-and-true classics you'll love forever, Nordstrom offers the very best in women's clothing. Thanks to our vast online assortment of dresses, pants, skirts and tops from leading brands, building your dream wardrobe is a breeze. To transition seamlessly from season to season, shop our broad selection of warm coats, sweaters and jackets.",
             "image_url":"images/dress6.jpg",
             "price" : 13.00,
             "availableSizes" :[
