@@ -12,15 +12,13 @@ class App extends React.Component {
     super();
     this.state = {
       products: data.products,
-      cartItems: [],
+      cartItems: localStorage.getItem("cartItems") ? JSON.parse(localStorage.getItem("cartItems")) : [],
       size: "",
       sort: "",
     }
   }
 
-  removeFromCart = (product) => {
-
-    console.log("Removing from Cart");
+  removeFromCart = async (product) => {
     let cartItems = [...this.state.cartItems];
 
     //this.setState({ cartItems: cartItems.filter((x) => x._id !== product._id) });
@@ -36,13 +34,12 @@ class App extends React.Component {
       }
     })
 
-    this.setState({ cartItems: cartItems });
-
+    await this.setState({ cartItems: cartItems });
+    localStorage.setItem("cartItems", JSON.stringify(this.state.cartItems));
 
   }
 
-
-  addToCart = (product) => {
+  addToCart = async (product) => {
     const cartItems = this.state.cartItems;
     let alreadyExists = false;
 
@@ -58,8 +55,8 @@ class App extends React.Component {
       cartItems.push({ ...product, count: 1 })
     }
 
-    this.setState({ cartItems });
-
+    await this.setState({ cartItems });
+    localStorage.setItem("cartItems", JSON.stringify(this.state.cartItems));
 
   }
 
@@ -94,6 +91,11 @@ class App extends React.Component {
 
   }
 
+  createOrder = (order) => {
+    alert("Need to Save Order" + order.name);
+  }
+
+
   render() {
     const { cartItems } = this.state;
     return (
@@ -115,7 +117,7 @@ class App extends React.Component {
               <Products products={this.state.products} addToCart={this.addToCart} />
             </div>
             <div className="sidebar">
-              <Cart cartItems={cartItems} removeFromCart={this.removeFromCart} />
+              <Cart cartItems={cartItems} removeFromCart={this.removeFromCart} createOrder={this.createOrder} />
             </div>
           </div>
         </main>
