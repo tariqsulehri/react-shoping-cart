@@ -4,19 +4,33 @@ import React from 'react';
 import Cart from './components/cart';
 import Filter from './components/filter';
 import Products from './components/products';
-import data from './data.json';
+// import data from './data.json';
+
 
 class App extends React.Component {
 
   constructor() {
     super();
     this.state = {
-      products: data.products,
+      products: [],
       cartItems: localStorage.getItem("cartItems") ? JSON.parse(localStorage.getItem("cartItems")) : [],
       size: "",
       sort: "",
     }
   }
+
+
+  getProducts = async () => {
+    let response = await fetch('http://localhost:3200/api/products');
+    const data = await response.json();
+    console.log(data);
+    this.setState({ products: data });
+  }
+
+  async componentDidMount() {
+    await this.getProducts();
+  }
+
 
   removeFromCart = async (product) => {
     let cartItems = [...this.state.cartItems];
@@ -79,11 +93,11 @@ class App extends React.Component {
 
   filterProducts = async (event) => {
     if (event.target.value === "" || event.target.value === "all") {
-      await this.setState({ size: event.target.value, products: data.products })
+      await this.setState({ size: event.target.value, products: this.state.products })
     } else {
       await this.setState({
         size: event.target.value,
-        products: data.products.filter(product => product.availableSizes.indexOf(event.target.value) >= 0)
+        products: this.state.products.filter(product => product.availableSizes.indexOf(event.target.value) >= 0)
       })
     }
 
