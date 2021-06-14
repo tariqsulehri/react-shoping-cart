@@ -1,11 +1,8 @@
 
-// import CheckOut from './checkout.component';
 import React from 'react';
 import Cart from './components/cart';
 import Filter from './components/filter';
 import Products from './components/products';
-// import data from './data.json';
-
 
 class App extends React.Component {
 
